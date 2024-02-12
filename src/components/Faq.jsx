@@ -1,18 +1,45 @@
+import { useState } from "react"
+import FaqCard from "../layout/faqcard"
 
 const Faq = () => {
+  
+  const data = [{
+    question:'What should I do on my first trip to Rome?',
+    answer:`A first-time visitor to Rome may want to see some of the must-see sites like the Vatican Museums and Sistine Chapel, along with Saint Peter's Basilica; the one and only Colosseum, along with the Roman Forum and Palatine Hill, and one of the most amazing monuments from ancient Rome, the Pantheon.`
+  },
+  {
+    question:'What are some hidden gems to see in Rome?',
+    answer:`Rome is packed with hidden gems. If you love art, don't miss the Galleria Doria Pamphilj or Palazzo Barberini. The Museo Barracco is a free museum and well worth a quick visit. If you love the ancient stuff, don't miss the Domus Romana at Palazzo Valentini, the Domus Aurea, and the Baths of Caracalla. For even more hidden gems, take a tour of Trastevere, a fascinating neighborhood full of history and ambiance.`
+  },
+  {
+    question:'How much time should I spend in Rome?',
+    answer:`A first-time visitor to Rome may want to see some of the must-see sites like the Vatican Museums and Sistine Chapel, along with Saint Peter's Basilica; the one and only Colosseum, along with the Roman Forum and Palatine Hill, and one of the most amazing monuments from ancient Rome, the Pantheon.`
+  },
+  {
+    question:'What food is Rome known for?',
+    answer:`A first-time visitor to Rome may want to see some of the must-see sites like the Vatican Museums and Sistine Chapel, along with Saint Peter's Basilica; the one and only Colosseum, along with the Roman Forum and Palatine Hill, and one of the most amazing monuments from ancient Rome, the Pantheon.`
+  },
+  {
+    question:'What is the best way to get around Rome?',
+    answer:`A first-time visitor to Rome may want to see some of the must-see sites like the Vatican Museums and Sistine Chapel, along with Saint Peter's Basilica; the one and only Colosseum, along with the Roman Forum and Palatine Hill, and one of the most amazing monuments from ancient Rome, the Pantheon.`
+  }]
   return (
-    <div>
-      <div>
-        <h1>Frequently asked questions</h1>
-        <p>
+    <div className="grid grid-cols-2 ">
+      <div className="mx-auto mt-5">
+        <h1 className="text-[#1C2024] font-semibold text-3xl">Frequently asked questions</h1>
+        <p className="text-[#60646C] text-lg my-5">
           Here are some of our most asked questions.
 
         </p>
-        <div>
-          <div>
-            <h1>Still need help? We’re here for you.</h1>
-            <button className="w-32 h-12 text-white bg-black rounded">Chat with us</button>
-            <svg width="158" height="100" viewBox="0 0 158 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="bg-[#F9F9FB] rounded-xl max-w-fit flex items-center p-4 mt-16">
+          <div className="mr-5">
+            <h1 className="text-xl font-semibold ">Still need help? </h1>
+           <h1 className="mb-6 text-xl font-semibold">
+            We’re here for you
+            </h1> 
+            <button className="w-32 h-12 text-white bg-black rounded-xl">Chat with us</button>
+          </div>
+            <svg className="ml-10 mr-5" width="190" height="150" viewBox="0 0 158 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M105.765 62.2215L108.743 61.6963L110.166 67.5876L106.443 68.2441L105.765 62.2215Z" fill="black" />
               <rect x="73.3073" y="74.0867" width="71.0741" height="27.2199" rx="10.7143" transform="rotate(-10 73.3073 74.0867)" fill="black" />
               <path d="M101.686 69.0829L108.305 67.9159L105.326 72.1701C104.413 73.4732 102.381 73.0226 102.104 71.4559L101.686 69.0829Z" fill="white" />
@@ -31,11 +58,15 @@ const Faq = () => {
               <path d="M80.3617 62.0659C81.046 62.3363 81.1278 63.2718 80.5009 63.657L75.7653 66.5664L75.1929 60.023L80.3617 62.0659Z" fill="#FFF000" />
             </svg>
 
-          </div>
         </div>
       </div>
       <div>
-
+        
+        {data.map((value,ind)=>{
+          return <FaqCard key={ind} value={value}/>
+        })
+          
+        }
       </div>
     </div>
   )

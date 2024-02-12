@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+  .input-placeholder input:valid + .placeholder {
+    display: none;
+  }
+  
+ .custom-select select:valid + .custom-label {
+    display: none;
+ }
+ 
+   .input-number::-webkit-outer-spin-button,
+   .input-number::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+   }

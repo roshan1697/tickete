@@ -1,7 +1,8 @@
 import Footer from "./components/footer"
 import Navbar from "./components/navbar"
-import Payment from "./components/payment"
 import Faq from "./components/Faq"
+import Carousel from "./layout/imageslider"
+import MainSection from "./components/mainsection"
 
 
 function App() {
@@ -14,9 +15,13 @@ function App() {
       
       <span className="text-white bg-black ">Holding your tickets for 30:00</span>
     </div>
-    <Payment/>
+    <div>
+      <MainSection/>
+    </div>
+    
     <Faq/>
     <Footer/>
+    <Carousel/>
     </>
   )
 }
